@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        #navbar{
+           
+            width: 100%;
+            position: relative;
+            background-color: rgb(59, 134, 113);
+            display: flex;
+            padding: 20px;
+        }
+        #navbar select{
+            
+            font-size: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+        #navbar> nav label{
+            font-size: 18px;
+            font-family: Candara;
+            padding: 20px;
+            color: aliceblue;
+        }
+        #container{
+            
+            width: 100%;
+        }
+        .row{
+            padding: 20px;
+            background-color: rgb(59, 134, 113);
+            border: 3px solid rgb(250, 229, 234);
+        }
+        .row th{
+            padding: 12px;
+            width: 1000px;
+            font-size: 20px;
+            font-family: Candara;
+            color: rgb(235, 232, 230);
+        }
+        #dataRow{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #dataRow td{
+            padding: 12px;
+            width: 1000px;
+            font-size: 20px;
+            font-family: Candara;
+            color: rgb(31, 15, 3);
+            font-weight: 500;
+            border: 1px dotted black;
+        }
+        #tbody{
+            background-color: aliceblue;
+
+        }
+        #tbody td{
+            font-size: 18px;
+            font-family: Candara;
+            padding: 10px;
+        }
+        button{
+            width: 90px;
+            height: 50px;
+            margin-top: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    <div id="navbar">
+        <nav>
+            <label for="">Filter by Department</label>
+            <select name="" id="departments">
+                <option value="">Select Department</option>
+                <option value="hr">hr</option>
+                <option value="finance">finance</option>
+                <option value="marketing">marketing</option>
+                <option value="engineering">engineering</option>
+                <option value="operations">operations</option>
+            </select>
+
+            <label for="">Filter by Gender</label>
+            <select name="" id="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">other</option>
+
+            </select>
+
+            <label for="">Filter by Salary</label>
+            <select name="" id="sortByPrice">
+                <option value="">Select Order</option>
+                <option value="asc">Low to High</option>
+                <option value="desc">High to Low</option>
+            </select>
+
+        </nav>
+
+       
+        
+    </div>
+    <div id="container">
+        <table>
+            
+            <thead id="table">
+              <tr class="row">
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+    
+
+</body>
+<script src="index.js"></script>
+</html>
